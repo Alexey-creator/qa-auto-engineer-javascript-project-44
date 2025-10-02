@@ -1,4 +1,4 @@
-export const description = 'Find the greatest common divisor of given numbers.';
+export const description = "Find the greatest common divisor of given numbers.";
 
 function findGcd(a, b) {
   if (b === 0) {
@@ -13,5 +13,5 @@ export const generateRound = () => {
   const question = `${randomNumber1} ${randomNumber2}`;
   const correctAnswer = findGcd(randomNumber1, randomNumber2);
 
-  return [question,String(correctAnswer)];
+  return [question, String(correctAnswer)];
 };

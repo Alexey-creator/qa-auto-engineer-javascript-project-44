@@ -1,4 +1,5 @@
-export const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+export const description =
+  'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (number) => {
   if (number < 2) {
@@ -9,17 +10,17 @@ const isPrime = (number) => {
 
   while (divider <= number / 2) {
     if (number % divider === 0) {
-      return false; 
+      return false;
     }
     divider += 1;
   }
-  
+
   return true;
 };
 
 export const generateRound = () => {
   const question = Math.floor(Math.random() * 100) + 1;
-  const correctAnswer = (isPrime(question) === true) ? 'yes' : 'no';
-  
-  return [question,correctAnswer];
+  const correctAnswer = isPrime(question) === true ? "yes" : "no";
+
+  return [question, correctAnswer];
 };
